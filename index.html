@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>定位布局完成后台网页设计</title>
+	<link rel="stylesheet" href="common.css">
+	<link rel="stylesheet" href="http://at.alicdn.com/t/font_1327450_9qlr53v4dy.css">
+
+	<style>
+		html,body,.container {
+			height: 100%;
+		}
+		.container {
+			position: relative;
+		}
+		.top {
+			height: 120px;
+			background-color: teal;
+			color: #ffffff;
+		}
+		.top > .logo {
+			font-size: 26px;
+			line-height: 120px;
+			padding: 0 1em;
+		}
+		.content {
+			position: absolute;
+			top: 120px;
+			bottom: 0;
+			width: 100%;
+		}
+		.left {
+			width: 220px;
+			background-color: #ffffff;
+			height: 100%;
+			float: left;
+			font-size: 14px;
+		}
+		.left > ul.left-nav {
+			text-align: center;
+		}
+		.left > ul.left-nav > li {
+			line-height: 3em;
+			border-bottom: 1px solid #cccccc;
+			position: relative;
+		}
+		.left > ul.left-nav > li i.iconfont {
+			position: absolute;
+			left: 3em;
+		}
+		.left > ul.left-nav > li.current,
+		.left > ul.left-nav > li:hover {
+			background-color: #cccccc;
+			color: #ffffff;
+		}
+		.left > ul.left-nav > li.current a,
+		.left > ul.left-nav > li:hover a {
+			color: #ffffff;
+		}
+
+		.right {
+			margin-left: 220px;
+			height: 100%;
+			overflow-y: auto;
+			padding: 1em;
+			box-sizing: border-box;
+			background-color: #cccccc;
+		}
+		.wrapper {
+			background-color: #ffffff;
+			border-radius: 5px;
+			padding: 1em;
+			height: 100%;
+		}
+
+		.btns {
+			margin-bottom: .5em;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="top">
+			<div class="logo">
+				智慧校园 - 评教系统
+			</div>
+		</div>
+		<div class="content">
+			<div class="left">
+				<ul class="left-nav">
+					<li class="current">
+						<i class="iconfont icon-weixin"></i>
+						<a href="">学生管理</a>
+					</li>
+					<li>
+						<i class="iconfont icon-yonghu"></i>
+						<a href="">教师管理</a>
+					</li>
+					<li><a href="">课程管理</a></li>
+					<li><a href="">评教管理</a></li>
+					<li><a href="">问卷管理</a></li>
+				</ul>
+			</div>
+			<div class="right">
+				<div class="wrapper">
+					<!-- 按钮组 -->
+					<div class="btns">
+						<div class="btn">添加</div>
+						<div class="btn">批量删除</div>
+					</div>
+					<!-- 表格区域 -->
+					<table class="table">
+						<thead>
+							<tr>
+								<td>编号</td>
+								<td>姓名</td>
+								<td>性别</td>
+								<td>手机号</td>
+								<td>地址</td>
+								<td>操作</td>
+							</tr>
+						</thead>
+						<tbody>
+							
+							<tr>
+								<td> <input type="checkbox"></td>
+								<td>张三</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td>
+									<i>删除</i>
+									<i>修改</i>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<!-- 分页 -->
+
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
